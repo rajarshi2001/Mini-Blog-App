@@ -12,7 +12,7 @@ const BlogUpdate = () => {
     })
 
     const getData = async (id) =>{
-        const res = await axios.get(`https://127.0.0.1:8000/blogapi/${id}`).catch(err => console.log(err))
+        const res = await axios.get(`https://reactdjangoblog.herokuapp.com/blogapi/${id}`).catch(err => console.log(err))
         setAtr({
             title: res.data.title,
             author: res.data.author,
