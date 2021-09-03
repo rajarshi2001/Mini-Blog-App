@@ -11,12 +11,12 @@ const BlogList = () => {
     const { blogs } = bloglist
     const dispatch = useDispatch()
     const fetchallblogs = async () => {
-        const res = await axios.get('http://127.0.0.1:8000/blogapi/').catch
+        const res = await axios.get('http://reactdjangoblog.herokuapp.com/blogapi/').catch
             (err => console.log(err))
             dispatch(get_All_Blogs(res.data))
     }
     const delBlog = (blog_id) =>{
-        axios.delete(`http://127.0.0.1:8000/blogapi/${blog_id}`).catch(err => console.log(err))
+        axios.delete(`http://reactdjangoblog.herokuapp.com/blogapi/${blog_id}`).catch(err => console.log(err))
         setDel(true)
        
     }

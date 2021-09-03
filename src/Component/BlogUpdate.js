@@ -35,7 +35,7 @@ const BlogUpdate = () => {
             formdata.append('desc', atr.desc)
             formdata.append('url_news', atr.url_news)
             formdata.append('post_img', atr.post_img)
-            axios.put(`http://127.0.0.1:8000/blogapi/${context.id}/`, formdata).then(res => console.log(res)).catch
+            axios.put(`http://reactdjangoblog.herokuapp.com/blogapi/${context.id}/`, formdata).then(res => console.log(res)).catch
                 (err => console.log(err))
             setAtr({
                 title: "",
