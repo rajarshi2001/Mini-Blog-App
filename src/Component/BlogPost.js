@@ -34,7 +34,7 @@ const BlogPost = () => {
             formdata.append('desc', items.desc)
             formdata.append('url_news', items.url_news)
             formdata.append('post_img', items.post_img)
-            axios.post('http://reactdjangoblog.herokuapp.com/blogapi/', formdata).then(res => console.log(res)).catch(err => console.log(err))
+            axios.post('https://reactdjangoblog.herokuapp.com/blogapi/', formdata).then(res => console.log(res)).catch(err => console.log(err))
             setAttr(
                 {
                     title: "",
