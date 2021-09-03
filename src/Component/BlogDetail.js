@@ -16,7 +16,7 @@ const BlogDetails = () => {
     const dispatch = useDispatch()
 
     const fetchblog = async (id) => {
-        const res = await axios.get(`http://reactdjangoblog.herokuapp.com/blogapi/${id}`).catch(
+        const res = await axios.get(`https://reactdjangoblog.herokuapp.com/blogapi/${id}`).catch(
             err => console.log(err)
         )
         dispatch(get_blog(res.data))
