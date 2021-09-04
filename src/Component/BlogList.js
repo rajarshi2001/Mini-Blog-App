@@ -22,7 +22,7 @@ const BlogList = () => {
     }
     useEffect(() => {
         fetchallblogs()
-      },[del])
+      },[setDel])
 
     useEffect(() => {
       fetchallblogs()
