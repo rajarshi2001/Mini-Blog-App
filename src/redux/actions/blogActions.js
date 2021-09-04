@@ -20,3 +20,9 @@ export const post_blog = (pblog) =>{
         payload: pblog
     }
 }
+export const removeblog = (id) =>{
+    return{
+        type: blogTypes.REMOVE_BLOG,
+        payload: id
+    }
+}

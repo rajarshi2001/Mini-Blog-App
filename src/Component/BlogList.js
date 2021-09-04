@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch, useStore } from 'react-redux'
 import axios from 'axios'
-import { get_All_Blogs } from '../redux/actions/blogActions';
+import { get_All_Blogs, removeblog } from '../redux/actions/blogActions';
 import BlogComp from './BlogComp';
 const BlogList = () => {
-    const [del, setDel] = useState(false)
     const bloglist = useSelector((state) => {
         return state.allBlogs
     })
@@ -17,12 +16,8 @@ const BlogList = () => {
     }
     const delBlog = (blog_id) =>{
         axios.delete(`https://reactdjangoblog.herokuapp.com/blogapi/${blog_id}`).catch(err => console.log(err))
-        setDel(true)
-       
+        dispatch(removeblog(blog_id))
     }
-    useEffect(() => {
-        fetchallblogs()
-      },[setDel])
 
     useEffect(() => {
       fetchallblogs()
