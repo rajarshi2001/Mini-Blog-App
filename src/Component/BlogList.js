@@ -22,7 +22,6 @@ const BlogList = () => {
     }
     useEffect(() => {
         fetchallblogs()
-        setDel(false)
       },[del])
 
     useEffect(() => {
